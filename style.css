@@ -88,7 +88,7 @@ video {
 }
 header {
   color: white;
-  background-image: url("../assets/lucas-vinicius-peixoto-pJIimwc_S4M-unsplash.jpg");
+  background-image: url("/assets/stefan-vladimirov-Q_Moi2xjieU-unsplash.jpg");
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -101,19 +101,23 @@ header {
 header nav {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-right: 5%;
+  /* margin-right: 5%; */
   font-size: 2rem;
 }
 header nav a {
+  display: flex;
+  justify-content: space-evenly;
   padding: 1% 1% 0 1%;
+  color: white;
+  /* width: 25%; */
 }
 header nav a span {
   color: #07FE20;
 }
 header nav #logo {
-  margin-right: auto;
+  /* margin-right: auto; */
   padding-left: 7%;
 }
 header nav #logo span {
@@ -124,9 +128,14 @@ header div {
   text-align: center;
   color: #07FE20;
 }
+header #part2{
+display: flex;
+justify-content: flex-end;
+width: 50%;
+}
 header div h1 {
   font-size: 4rem;
-  padding: 3%;
+  padding: 7%;
 }
 header div span {
   color: white;
@@ -138,25 +147,40 @@ header .start {
   font-size: 1.5rem;
   border-radius: 5%;
   margin: 1%;
+  width: 100%;
 }
-header #mantra {
+ header #mantra {
   display: flex;
   justify-content: space-between;
   padding: 4% 0 4% 0;
   font-size: 3rem;
-  opacity: 0.5;
+  opacity: 0.6;
+  width: 100%;
 }
 @media (max-width: 500px) {
   header {
+    justify-content: space-between;
     align-items: center;
-    height: 50%;
+    /* height: 60%; */
   }
   header nav {
+    width: 100%;
     font-size: 1.5rem;
     justify-content: start;
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav #part2{
+    width: 100%;
+    align-items: center;
+  }
+  header nav #logo{
+    padding: 0;
   }
   header nav a {
     flex: 1;
+    /* justify-content: unset; */
+    text-align: center;
   }
   header div h1 {
     font-size: 2.5rem;
@@ -165,7 +189,7 @@ header #mantra {
     display: none;
   }
   header #mantra {
-    font-size: 2rem;
+    display: none;
   }
 }
 #first {
@@ -196,14 +220,16 @@ header #mantra {
 @media (max-width: 500px) {
   #first mark {
     text-align: center;
+    margin-top:0;
   }
   #first div {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   #first div img {
     display: none;
-    width: 90%;
+    width: 100%;
   }
   #first div img:first-child {
     display: block;
@@ -308,7 +334,7 @@ header #mantra {
 #third .set2 img {
   flex: 1;
   width: 25%;
-  height: 25%;
+  height: auto;
 }
 @media (max-width: 500px) {
   #third .set1 {
@@ -368,6 +394,9 @@ footer .social {
   footer nav {
     padding: 2%;
     width: 80%;
+  }
+  footer nav a{
+    width: 25%;
   }
   footer .social {
     width: 80%;
