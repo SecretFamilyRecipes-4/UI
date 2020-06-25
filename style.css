@@ -129,7 +129,7 @@ header nav #logo span {
   color: #07FE20;
 }
 header div {
-  width: 100%;
+  width: 50%;
   text-align: center;
   color: #07FE20;
 }
@@ -139,8 +139,12 @@ justify-content: flex-end;
 width: 50%;
 }
 header div h1 {
+  background: rgb(47,45,45);
+  background: radial-gradient(circle, rgba(47,45,45,1) 8%, rgba(255,255,255,0.008841036414565795) 75%);
   font-size: 4rem;
-  padding: 7%;
+  /* padding: 7%; */
+  margin: 7%;
+  
 }
 header div span {
   color: white;
@@ -161,6 +165,11 @@ header .start {
   font-size: 3rem;
   opacity: 0.6;
   width: 100%;
+}
+#mantra a{
+  background: rgb(47,45,45);
+  background: linear-gradient(360deg, rgba(47,45,45,1) 31%, rgba(255,255,255,0) 100%);
+  border-radius: 10%;
 }
 @media (max-width: 500px) {
   header {
@@ -206,7 +215,8 @@ header .start {
   align-items: center;
 }
 #first mark {
-  background-color: #2F2D2D;
+  background: rgb(47,45,45);
+  background: radial-gradient(circle, rgba(47,45,45,0.9976365546218487) 57%, rgba(31,30,30,0) 100%);
   padding: 0 9% 0 9%;
   margin: 5% 0 5% 0;
 }
@@ -249,7 +259,8 @@ header .start {
   align-items: center;
 }
 #second mark {
-  background-color: #2F2D2D;
+  background: rgb(47,45,45);
+  background: radial-gradient(circle, rgba(47,45,45,0.9976365546218487) 57%, rgba(31,30,30,0) 100%);
   width: 95%;
   padding: 2% 9% 2% 9%;
   margin: 3% 0 3% 0;
@@ -272,7 +283,7 @@ header .start {
   padding: 2%;
 }
 #second span {
-  color: green;
+  color: #07FE20;
 }
 #second .img {
   display: flex;
@@ -337,11 +348,56 @@ header .start {
   height: 75%;
   margin-bottom: 2%;
 }
-#third .set2 img {
+/* #third .set2 img {
   flex: 1;
   width: 25%;
   height: auto;
+} */
+
+.set2 .pic img{
+  width: 100%;
+  height: 100%;
+  flex: 1;
 }
+/* test animations */
+.pic {
+  text-decoration: none;
+  color: inherit;
+  /* display: block; */
+  background: rgba(0, 0, 0, 0.1);
+  /* padding: 0.5rem; */
+  font-size: 1.2rem;
+  /* margin-top: 1rem; */
+  overflow: hidden;
+  text-align: center;
+}
+.pic a{
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  font-size: 22px;
+  margin-top: 1rem;
+}
+/* #third .set2 a img {
+  flex: 1;
+  height:100%;
+  width: 100%;
+  height: auto;
+} */
+/* #third .set2 a */
+@media(hover: hover){
+  .pic p{
+    transform: translateY(100px);
+    transition: 0.2s;
+  }
+  .pic:hover p{
+    transform: translateY(0);
+  }
+}
+
+
+
+
 @media (max-width: 500px) {
   #third .set1 {
     display: none;
@@ -361,7 +417,7 @@ footer {
 }
 footer h5 {
   padding-top: 5%;
-  padding-bottom: 2%;
+  padding-bottom: 5%;
   font-size: 3rem;
   color: #07FE20;
 }
@@ -448,7 +504,8 @@ body .startBanner {
   flex-direction: column;
 }
 .team h2{
-  background-color: #2F2D2D;
+  background: rgb(47,45,45);
+  background: radial-gradient(circle, rgba(47,45,45,0.9976365546218487) 57%, rgba(31,30,30,0) 100%);
   color: #07FE20;
   width:80%;
   height: 10%;
@@ -494,7 +551,6 @@ body .startBanner {
   align-self: center;
   display: flex;
   align-items: center;
-  /* background-color: #07FE20; */
   color: #07FE20;
   font-size: 3rem;
   /* padding: 1%; */
@@ -514,7 +570,42 @@ body .startBanner {
 .members img{
   /* flex: 1; */
   /* display: block; */
-  width: 20em;
-  height: 20em;
+  width: 100%;
+  height: 75%;
   border-radius: 50%;
+}
+
+@media(max-width:1805px){
+  .team{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .team h2{
+    width: 100%;
+  }
+  .members img{
+    height: 65%;
+  }
+}
+@media(max-width:800px){
+  #gallery2{
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+  }
+  #gallery1{
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .members{
+    width: 75%;
+  }
+  .members img{
+    /* height: 35%; */
+  }
+
+  .members h3{
+    font-size: 1.5rem;
+  }
 }
